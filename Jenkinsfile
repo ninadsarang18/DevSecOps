@@ -1,7 +1,7 @@
 pipeline {
 agent any
 tools {
-maven "Maven"
+maven 'Maven'
 }
 stages {
 stage('Initialize'){
@@ -12,7 +12,7 @@ sh '''
 '''
 }
 }
-      stage('build'){
+      stage('Build'){
       steps{
 sh 'mvn clean package'
 }

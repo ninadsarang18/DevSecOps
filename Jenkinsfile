@@ -15,9 +15,9 @@ sh '''
       stage('Check-Secrets')
       {
             steps {
-                  sh 'rm Identified_Secrets || true'
-            sh 'docker run dxa4481/trufflehog --json https://github.com/ninadsarang18/DevSecOps.git > Identified_Secrets'
-                  sh 'cat Identified_Secrets'
+                  sh 'rm Secrets || true'
+                  sh 'docker run dxa4481/trufflehog --json https://github.com/ninadsarang18/DevSecOps.git > Secrets'
+                  sh 'cat Secrets'
             } 
       }
       stage('Build'){

@@ -16,7 +16,7 @@ sh '''
       {
             steps {
                   sh 'rm Identified_Secrets || true'
-            sh 'docker pull dxa4481/trufflehog --json https://github.com/ninadsarang18/DevSecOps.git > Identified_Secrets'
+            sh 'docker run dxa4481/trufflehog --json https://github.com/ninadsarang18/DevSecOps.git > Identified_Secrets'
                   sh 'cat Identified_Secrets'
             } 
       }

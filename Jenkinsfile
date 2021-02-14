@@ -13,7 +13,6 @@ sh '''
 '''
 }
 }
-}
 stage('Check-Secrets')
       {
             steps {

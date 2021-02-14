@@ -13,15 +13,7 @@ sh '''
 '''
 }
 }
-stage('Check-Secrets')
-      {
-            steps {
-                  sh 'rm Secrets || true'
-                  sh 'docker run dxa4481/trufflehog --json https://github.com/ninadsarang18/DevSecOps.git > Secrets'
-                  sh 'cat Secrets'
-            } 
-      }
-stage('SOURCE_Composition_Analysis')
+stage('Source_Composition_Analysis')
       {
       steps 
             {

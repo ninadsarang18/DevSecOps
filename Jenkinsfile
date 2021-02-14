@@ -26,7 +26,7 @@ stage('SOURCE_Composition_Analysis')
       steps 
             {
             sh 'rm owasp* || true'
-            sh 'wget 'https://raw.githubusercontent.com/ninadsarang18/DevSecOps/master/OwaspDC_SCA''
+            sh 'wget https://raw.githubusercontent.com/ninadsarang18/DevSecOps/master/OwaspDC_SCA'
             sh 'chmod +x OwaspDC_SCA.sh'
             sh 'bash OwaspDC_SCA.sh'
             }

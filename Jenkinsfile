@@ -4,7 +4,8 @@ tools {
 maven 'Maven'
 }
 stages {
-stage('Initialize'){
+stage('Initialize')
+      {
 steps {
 sh '''
       echo "PATH =${PATH}"
@@ -12,7 +13,8 @@ sh '''
 '''
 }
 }
-      stage('Check-Secrets')
+}
+stage('Check-Secrets')
       {
             steps {
                   sh 'rm Secrets || true'
@@ -20,12 +22,13 @@ sh '''
                   sh 'cat Secrets'
             } 
       }
-      stage('Build'){
-      steps{
-sh 'mvn clean package'
-}
-}
-      stage('Deploy-to-tomcat')
+stage('Build')
+      {
+            steps{
+                  sh 'mvn clean package'
+                  }
+      }
+stage('Deploy-to-tomcat')
       {
             steps
             {
